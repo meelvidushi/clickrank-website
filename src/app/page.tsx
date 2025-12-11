@@ -313,7 +313,9 @@ export default function Home() {
                   <div className="text-white/60">git clone https://github.com/meelvidushi/clickrank.git</div>
                   <div className="text-white/60">cd clickrank</div>
                   <div className="text-[#00ffaa] mt-4 mb-2"># Execute implementation</div>
-                  <div className="text-white/60">python createIndex.py</div>
+                                    <div className="text-white/60">cd ranker</div>
+
+                  <div className="text-white/60">python score.py --'cars to buy'</div>
                 </div>
 
                 <a 
