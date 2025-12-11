@@ -182,16 +182,7 @@ export default function Home() {
                 system that integrates user click data with query similarity metrics, creating a continuous 
                 re-ranking mechanism that evolves with user behavior.
               </p>
-              <div className="grid grid-cols-2 gap-6 pt-8">
-                <div className="border-l-2 border-[#00ffaa] pl-6 space-y-2">
-                  <div className="text-3xl font-bold text-white">0-1</div>
-                  <div className="text-sm text-white/50">Scaling Metric Range</div>
-                </div>
-                <div className="border-l-2 border-[#00ffaa] pl-6 space-y-2">
-                  <div className="text-3xl font-bold text-white">ZERO</div>
-                  <div className="text-sm text-white/50">Preprocessing Required</div>
-                </div>
-              </div>
+           
             </div>
           </div>
         </div>
@@ -265,7 +256,7 @@ export default function Home() {
                 phase: "PHASE_02", 
                 title: "Core Algorithm", 
                 desc: "Implement query vector embeddings with cosine similarity computation between current and historical queries.",
-                tech: "TensorFlow • Sentence-BERT • Scikit-learn"
+                tech: "all-MiniLM-L6-v2 • Scikit-learn"
               },
               { 
                 phase: "PHASE_03", 
@@ -276,8 +267,7 @@ export default function Home() {
               { 
                 phase: "PHASE_04", 
                 title: "Performance Metrics", 
-                desc: "Comprehensive evaluation framework comparing PageRank baseline with ClickRank-enhanced rankings.",
-                tech: "Matplotlib • Seaborn • Statistical Testing"
+                desc: "Side-by-side change of web page rankings",
               }
             ].map((item, i) => (
               <div key={i} className="group relative p-8 bg-gradient-to-r from-white/5 to-transparent border-l-2 border-[#00ffaa] hover:from-[#00ffaa]/10 transition-all">
@@ -339,51 +329,48 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="space-y-4 p-8 bg-black/50 border border-white/10">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold">PROJECT STRUCTURE</h3>
-                  <div className="w-2 h-2 bg-[#00ffaa] animate-pulse" />
-                </div>
-                <div className="space-y-3 font-mono text-sm">
-                  <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
-                    <span>├──</span> createIndex.py
-                  </div>
-                  <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
-                    <span>├──</span> index.html
-                  </div>
-                  <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
-                    <span>├──</span> Database/
-                  </div>
-                  <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors pl-8">
-                    <span>└──</span> synthetic_data.json
-                  </div>
-                  <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
-                    <span>├──</span> ranker/
-                  </div>
-                  <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors pl-8">
-                    <span>├──</span> pagerank.py
-                  </div>
-                  <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors pl-8">
-                    <span>└──</span> clickrank.py
-                  </div>
-                  <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
-                    <span>└──</span> README.md
-                  </div>
-                </div>
-              </div>
+        <div className="space-y-6">
+  <div className="space-y-4 p-8 bg-black/50 border border-white/10">
+    <div className="flex items-center justify-between">
+      <h3 className="text-xl font-bold">PROJECT STRUCTURE</h3>
+      <div className="w-2 h-2 bg-[#00ffaa] animate-pulse" />
+    </div>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="p-6 bg-black/50 border border-white/10">
-                  <div className="text-3xl font-bold text-[#00ffaa] mb-2">4</div>
-                  <div className="text-sm text-white/60">Team Members</div>
-                </div>
-                <div className="p-6 bg-black/50 border border-white/10">
-                  <div className="text-3xl font-bold text-[#00ffaa] mb-2">CS 547</div>
-                  <div className="text-sm text-white/60">Information Retrieval</div>
-                </div>
-              </div>
-            </div>
+    <div className="space-y-3 font-mono text-sm">
+
+      {/* Database folder */}
+      <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
+        <span>├──</span> Database/
+      </div>
+
+      {/* ranker folder */}
+      <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
+        <span>├──</span> ranker/
+      </div>
+
+      {/* .gitignore */}
+      <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
+        <span>├──</span> .gitignore
+      </div>
+
+      {/* README.md */}
+      <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
+        <span>├──</span> README.md
+      </div>
+
+      {/* createIndex.py */}
+      <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
+        <span>├──</span> createIndex.py
+      </div>
+
+      {/* index.html */}
+      <div className="flex items-center gap-3 text-white/60 hover:text-[#00ffaa] transition-colors">
+        <span>└──</span> index.html
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
